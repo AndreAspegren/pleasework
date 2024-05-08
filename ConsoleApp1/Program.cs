@@ -1,2 +1,33 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿namespace ConsoleApp1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine(@"Hei, hva heter du?
+            woohooooo
+            jeg elsker linjer");
+            var input = Console.ReadLine();
+            int num = 2000;
+            long bigNum = 1000;
+            float floating = 4.2055f;
+            decimal decimals = 4.20m;
+            double doubleNum = 420.5;
+            string text = "Dette er tekst";
+            char oneLetter = 'W';
+            bool isTrue = true;
+            int[] manyNUm = { 1, 2, 3 };
+            string[] manyText = { "hei", "på", "deg" };
+            List<int> manyList = new List<int>();
+            int[] myNums = kek();
+            Console.WriteLine(@$"Velkommen {input} {num} 
+            {bigNum} {floating} {decimals} {doubleNum} 
+            {text} {oneLetter} {isTrue} {myNums[2]} {manyText[1]}");
+        }
+
+        static int[] kek()
+        {
+            return new int[] {1, 3, 2};
+        }
+    }
+}
