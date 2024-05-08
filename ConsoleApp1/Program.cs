@@ -2,6 +2,7 @@
 {
     internal class Program
     {
+        static int imGlobal = 420;
         static void Main(string[] args)
         {
             Console.WriteLine(@"Hei, hva heter du?
@@ -20,8 +21,9 @@
             string[] manyText = { "hei", "på", "deg" };
             List<int> manyList = new List<int>();
             int[] myNums = kek();
-            Console.WriteLine(@$"Velkommen {input} {num} 
-            {bigNum} {floating} {decimals} {doubleNum} 
+            int globalNum = global();
+            Console.WriteLine(@$"Velkommen {input} {num} {funNum()}
+            {bigNum} {floating} {decimals} {doubleNum} {globalNum}
             {text} {oneLetter} {isTrue} {myNums[2]} {manyText[1]}");
         }
 
@@ -29,5 +31,11 @@
         {
             return new int[] {1, 3, 2};
         }
+    static int global(){
+        return imGlobal; 
+    }
+    static int funNum(){
+        return 22; 
+    }
     }
 }
