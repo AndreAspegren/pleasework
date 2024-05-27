@@ -1,10 +1,8 @@
-﻿namespace ConsoleApp1
-{
-    internal class Program
-    {
+﻿namespace ConsoleApp1 {
+    internal class Program {
         static int imGlobal = 420;
-        static void Main(string[] args)
-        {
+        int globalint = 2;
+        static void Main(string[] args) {
             Console.WriteLine(@"Hei, hva heter du?
             woohooooo
             jeg elsker linjer");
@@ -24,18 +22,20 @@
             int globalNum = global();
             Console.WriteLine(@$"Velkommen {input} {num} {funNum()}
             {bigNum} {floating} {decimals} {doubleNum} {globalNum}
-            {text} {oneLetter} {isTrue} {myNums[2]} {manyText[1]}");
+            {text} {oneLetter} {isTrue} {myNums[2]} {manyText[1]} {test()}");
         }
 
-        static int[] kek()
-        {
-            return new int[] {1, 3, 2};
+        static int[] kek() {
+        return new int[] {1, 3, 2};
         }
-    static int global(){
+        static int global(){
         return imGlobal; 
-    }
-    static int funNum(){
+        }
+        public int test(){
+        return globalint; 
+        }
+        static int funNum(){
         return 22; 
-    }
+        }
     }
 }
